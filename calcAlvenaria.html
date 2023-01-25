@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigo da Obra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <a href="index.html" > <img src="imagens/Logo.png" alt="LOGO" class="logo"></a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="pgCalc.html">Calculadora de materiais</a></li>               
+                <li><a href="#">Dicas construtivas</a></li>          
+                <li><a href="#">Sobre nós</a></li>
+            </ul>
+        </nav>
+    </header>             
+       
+        
+    <section class="container3">
+        <h3>Calculadora de alvenaria</h3>
+        <div>
+            <label for="propCimento">Proporção de cimento:</label>
+            <input type="number" name="propCimento" id="propCimento">
+        </div>
+
+        <div>
+            <label for="propCal">Proporção de cal:</label>
+            <input type="number" name="propCal" id="propCal">
+        </div>
+       
+
+        <div>
+            <label for="propAreia">Proporção de areia:</label>
+            <input type="number" name="propAreia" id="propAreia">
+        </div>
+
+        <div>
+            <label for="largJunta">Largura da junta:</label>
+            <input type="number" name="largJunta" id="largJunta">
+        </div>
+
+        <div>
+            <label for="largTijolo">Largura tijolo:</label>
+            <input type="number" name="largTijolo" id="largTijolo">
+        </div>
+
+        <div>
+            <label for="altTijolo">Altura tijolo:</label>
+            <input type="number" name="altTijolo" id="altTijolo">
+        </div>
+
+        <div>
+            <label for="compriTijolo">Comprimenro tijolo:</label>
+            <input type="number" name="compriTijolo" id="compriTijolo">
+        </div>
+
+        <div>
+            <label for="areaParede">Área de parede:</label>
+            <input type="number" name="areaParede" id="areaParede">
+        </div>
+
+        <div>
+            <button class="calcular" id="calcAlvenariaBtn">Calcular</button>
+            <button class="calcular" id="cleanAlvenaria"> Limpar</button>
+        </div>
+
+        <div id="res"></div>
+
+    </section>
+
+    <footer>
+        <div>Website produzido por Caio Santos</div>
+        <div class="redeSocial">
+            <a href=""><img src="imagens/insta.png" alt="Instagram"></a>
+            <a href=""><img src="imagens/face.png" alt="Facebook"></a>
+            <a href=""><img src="imagens/wpp.png" alt="Whatsapp"></a>
+        </div>
+    </footer> 
+
+
+    <script src="calcAlvenaria.js"></script>
+    <script src="mobile-navbar.js"></script>
+</body>
+</html>
