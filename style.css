@@ -19,12 +19,12 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    
+    align-items: center;
 }
 
 
 a {
-    color: black;
+    color: #000;
     text-decoration: none;
 }
 
@@ -33,10 +33,11 @@ a:hover {
 }
 
 .logo {
-    width: 100px;
+    width: 5rem;
 }
 
 nav {
+    width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -66,19 +67,148 @@ nav {
     margin: 8px;
 }
 
-
-
-
-
 .imgfoto {
     width: 100%;
     border-radius: 20px;
 
 }
 
+/* PAGINA CALCULADORAS */
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #dcdcdf;
+    border: .1rem solid #12121460;
+    border-radius: .4rem;
+}
+
+h3 {
+    text-align: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-size: 1.8rem;
+    color: var(--principal);
+    margin-bottom: 1.5rem;
+}
+
+.container2 ul li {
+    list-style: none;
+    margin-bottom: 1rem;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    border: .1rem solid #12121460;
+    border-radius: .4rem;
+    padding: .5rem 1rem;
+    transition: .5s;
+}
+
+.container2 ul li:hover {
+    background-color: #23232e;
+}
+
+.container2 ul li a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #000;
+    transition: .5s;
+}
+
+.container2 ul li a:hover {
+    opacity: 1;
+    color: #ffff;
+}
+
+
+/* CALCULADORA DE FERRAGENS */
+
+.container3 {
+    min-width: 320px;
+    max-width: 80%;
+    padding: 1rem;
+    display: flex;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;  
+    background-color: #dcdcdf;
+    border: .1rem solid #12121460;
+    border-radius: .4rem;
+    gap: 1.5rem;
+}
+
+.container3 .form-ferragens div {
+    margin-bottom: .7rem;
+}
+
+.container3 .form-ferragens div input {
+    height: 1.5rem;
+    font-weight: bold;
+    outline: none;
+    border: transparent;
+    border-radius: .4rem;
+    padding-left: .4rem;
+}
+
+.form-ferragens .buttons-calc-ferr {
+    display: flex;
+    justify-content: center;
+}
+
+.form-ferragens .calcular {
+    margin: .5rem;
+    padding: .5rem 1rem;
+    background-color: #ffff;
+    border: .1rem solid #12121460;
+    border-radius: .4rem;
+    font-size: 1em;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    cursor:  pointer;
+    transition: .4s;
+}
+
+.calcular:hover {
+    background-color: var(--principal);
+    color: white;
+}
+
+.bitola {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+#res { 
+    text-align: center;
+    font-weight: bold;
+    margin-top: 3.5rem;
+}
+
+/* RODAPÉ */
+
+footer {
+    padding: 0 2.5rem;
+    height: 10vh;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--principal);
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+}
+
+footer div img {
+    width: 1.7rem;
+}
 
 
 
+
+/* MEDIA QUERYS */
 
 @media (max-width: 999px) {
 
@@ -106,104 +236,25 @@ nav {
     .mobile-menu {
         display: block;
     }
+
+    /* CALCULADORA DE FERRAGENS */
+
+    .container3 {
+        flex-direction: column;
+    }
+
+    #res {
+        margin: 0 0 1rem 0;
+        padding: 1rem;
+        border: .1rem solid #12121460;
+        border-radius: .4rem;
+    }
 }
 
 .nav-list.active {
     transform: translateX(0);
 }
 
-
-
-
-/*pgCalc*/
-
-.container2 {
-    width: 1200px;
-    height: auto;
-    margin: 0 auto;
-    
-    
-}
-
-h3 {
-    text-align: center;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    font-size: 1.8rem;
-    color: var(--principal);
-    margin-bottom: 30px;
-    margin-top: 10px;
-}
-
-.container2 ul li {
-    list-style: none;
-    margin: 10px;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    
-}
-
-.container2 ul li a {
-    text-decoration: none;
-    font-size: 1.5em;
-    color: black;
-}
-
-.container2 ul li a:hover {
-    color: var(--principal);
-}
-
-
-/*calcFerr*/
-
-.container3 {
-    min-width: 320px;
-    max-width: 700px;
-    height: auto;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    font-size: 1.0em;   
-    border: 4px solid var(--principal);
-    border-radius: 20px;
-    
-}
-
-.container3 div {
-    margin: 0 auto;
-    padding: 5px;
-}
-
-.container3 div input {
-    height: 25px;
-    font-weight: bold;
-}
-
-.calcular {
-    margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 120px;
-    height: 40px;
-    background-color: white;
-    border: 3px solid var(--principal);
-    border-radius: 10px;
-    font-size: 1em;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    cursor:  pointer;
-    
-}
-
-.calcular:hover {
-    background-color: var(--principal);
-    color: white;
-}
-
-.bitola {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-}
 
 @media (max-width: 400px) { /*tela menor qur 400px*/
     section {
@@ -230,24 +281,4 @@ h3 {
    
 }
 
-footer {
-    height: 10vh;
-    background-color: var(--principal);
-    color: white;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    
-    
-    
-}
-
-footer div img {
-    width: 35px;
-}
 
