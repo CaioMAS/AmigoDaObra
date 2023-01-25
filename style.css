@@ -15,8 +15,11 @@
 }
 
 body {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 
@@ -115,7 +118,8 @@ nav {
 /*pgCalc*/
 
 .container2 {
-    max-width: 1200px;
+    width: 1200px;
+    height: auto;
     margin: 0 auto;
     
     
@@ -151,13 +155,14 @@ h3 {
 /*calcFerr*/
 
 .container3 {
+    min-width: 320px;
     max-width: 700px;
-    min-height: 500px;
+    height: auto;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    font-size: 1.3em;   
+    font-size: 1.0em;   
     border: 4px solid var(--principal);
     border-radius: 20px;
     
@@ -198,5 +203,51 @@ h3 {
     display: flex;
     gap: 8px;
     align-items: center;
+}
+
+@media (max-width: 400px) { /*tela menor qur 400px*/
+    section {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .divcoluna {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    section div label {
+        margin-bottom: 0.4rem;
+    }
+
+    section div input {
+        margin-bottom: 0.4rem;
+        text-align: center;
+    }
+    
+   
+}
+
+footer {
+    height: 10vh;
+    background-color: var(--principal);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    
+    
+    
+}
+
+footer div img {
+    width: 35px;
 }
 

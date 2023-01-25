@@ -98,11 +98,11 @@ calcFerroBtn.addEventListener('click', function () {
     if(a === 0 || b === 0 || c === 0 || d === 0 || e === 0 || f === 0){
         alert('ERRO: Está faltando dados, complete por favor')
     } else {
-        criarP(`A quantidade de barras para pilares: ${quantbpilar} barras
-        A quantidade de barras para estribos: ${quantbestribos} barras        
-        Peso ferragem do pilar ${pesoPilar} kg
-        Peso ferragem do estribo ${pesoEstribo} kg
-        OBS.: As barras são de 12 metros `)   
+        criarP(`A quantidade de barras para pilares: ${quantbpilar} barras.
+        A quantidade de barras para estribos: ${quantbestribos} barras.        
+        Peso ferragem do pilar ${pesoPilar} kg.
+        Peso ferragem do estribo ${pesoEstribo} kg.
+        OBS.: As barras são de 12 metros. `)   
         
            
     }    
