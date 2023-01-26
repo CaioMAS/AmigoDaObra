@@ -42,10 +42,10 @@ calcAlvenariaBtn.addEventListener('click', function () {
     var quantCal = Math.round((((quantAreia/c)*(b*670))/20))    
     var quantTijolo = Math.round(1.07/( (f+1.5 )* (g+1.5 )/10000 )*h)
 
-    criarP(`${quantCimento}
-    ${quantCal}
-    ${quantAreia}
-    ${quantTijolo}`)
+    criarP(`Quantidade de cimento: ${quantCimento} saco de 50 kg
+    \n Quantidade de cal: ${quantCal} saco de 20 kg
+    \n Quantidade de areia: ${quantAreia} m³
+    \nQuantidade de tijolos: ${quantTijolo} unidades`)
 
 
 })

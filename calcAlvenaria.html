@@ -28,51 +28,44 @@
        
         
     <section class="container3">
-        <h3>Calculadora de alvenaria</h3>
-        <div>
-            <label for="propCimento">Proporção de cimento:</label>
-            <input type="number" name="propCimento" id="propCimento">
-        </div>
-
-        <div>
-            <label for="propCal">Proporção de cal:</label>
-            <input type="number" name="propCal" id="propCal">
-        </div>
-       
-
-        <div>
-            <label for="propAreia">Proporção de areia:</label>
-            <input type="number" name="propAreia" id="propAreia">
-        </div>
-
-        <div>
-            <label for="largJunta">Largura da junta:</label>
-            <input type="number" name="largJunta" id="largJunta">
-        </div>
-
-        <div>
-            <label for="largTijolo">Largura tijolo:</label>
-            <input type="number" name="largTijolo" id="largTijolo">
-        </div>
-
-        <div>
-            <label for="altTijolo">Altura tijolo:</label>
-            <input type="number" name="altTijolo" id="altTijolo">
-        </div>
-
-        <div>
-            <label for="compriTijolo">Comprimenro tijolo:</label>
-            <input type="number" name="compriTijolo" id="compriTijolo">
-        </div>
-
-        <div>
-            <label for="areaParede">Área de parede:</label>
-            <input type="number" name="areaParede" id="areaParede">
-        </div>
-
-        <div>
-            <button class="calcular" id="calcAlvenariaBtn">Calcular</button>
-            <button class="calcular" id="cleanAlvenaria"> Limpar</button>
+        <div class="form-ferragens">
+            <h3>Calculadora de alvenaria</h3>
+            <div class="divcoluna">
+                <label for="propCimento">Proporção de cimento <strong>(und)</strong>:</label>
+                <input type="number" name="propCimento" id="propCimento" class="inputNumber">
+            </div>
+            <div class="divcoluna">
+                <label for="propCal">Proporção de cal <strong>(und)</strong>:</label>
+                <input type="number" name="propCal" id="propCal" class="inputNumber">
+            </div>
+            <div class="divcoluna">
+                <label for="propAreia">Proporção de areia <strong>(und)</strong>:</label>
+                <input type="number" name="propAreia" id="propAreia" class="inputNumber">
+            </div>
+            <div class="divcoluna">
+                <label for="largJunta">Largura da junta <strong>(cm)</strong>:</label>
+                <input type="number" name="largJunta" id="largJunta" class="inputNumber">
+            </div>
+            <div class="divcoluna">
+                <label for="largTijolo">Largura tijolo <strong>(cm)</strong>:</label>
+                <input type="number" name="largTijolo" id="largTijolo" class="inputNumber">
+            </div>
+            <div class="divcoluna">
+                <label for="altTijolo">Altura tijolo <strong>(cm)</strong>:</label>
+                <input type="number" name="altTijolo" id="altTijolo" class="inputNumber">
+            </div>
+            <div class="divcoluna">
+                <label for="compriTijolo">Comprimenro tijolo <strong>(cm)</strong>:</label>
+                <input type="number" name="compriTijolo" id="compriTijolo" class="inputNumber">
+            </div>
+            <div class="divcoluna">
+                <label for="areaParede">Área de parede <strong>(m²)</strong>:</label>
+                <input type="number" name="areaParede" id="areaParede" class="inputNumber">
+            </div>
+            <div class="buttons-calc-ferr" >
+                <button class="calcular" id="calcAlvenariaBtn">Calcular</button>
+                <button class="calcular" id="cleanAlvenaria"> Limpar</button>
+            </div>
         </div>
 
         <div id="res"></div>

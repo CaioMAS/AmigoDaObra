@@ -56,6 +56,16 @@ calcFerroBtn.addEventListener('click', function () {
     
     var quantbpilar = Math.round(((a*b*c)/12)*1.1) 
     var quantbestribos = Math.round(((((a*c)/d)*(e*2+f*2+0.06))/12)*1.1)
+
+
+
+
+
+
+
+
+
+    
     
 
     var pesoPilar = 0
@@ -63,31 +73,31 @@ calcFerroBtn.addEventListener('click', function () {
 
     switch(g) {
         case "6.3":
-            pesoPilar = quantbpilar * 12 * 0.25
+            pesoPilar = Math.round(quantbpilar * 12 * 0.25)
             break
         case "8.0":
-            pesoPilar = quantbpilar * 12 * 0.4
+            pesoPilar = Math.round(quantbpilar * 12 * 0.4)
             break
         case "10.0":
-            pesoPilar = quantbpilar * 12 * 0.63
+            pesoPilar = Math.round(quantbpilar * 12 * 0.63)
             break
         case "12.5":
-            pesoPilar = quantbpilar * 12 * 1
+            pesoPilar = Math.round(quantbpilar * 12 * 1)
             break
     }
 
     switch(h) {
         case "4.2":
-            pesoEstribo = quantbestribos * 12 * 0.109
+            pesoEstribo = Math.round(quantbestribos * 12 * 0.109)
             break
         case "5.0":
-            pesoEstribo = quantbestribos * 12 * 0.16
+            pesoEstribo = Math.round(quantbestribos * 12 * 0.16)
             break
         case "6.3":
-            pesoEstribo = quantbestribos * 12 * 0.25
+            pesoEstribo = Math.round(quantbestribos * 12 * 0.25)
             break
         case "8.0":
-            pesoEstribo = quantbestribos * 12 * 0.4
+            pesoEstribo = Math.round(quantbestribos * 12 * 0.4)
             break
     }
 
