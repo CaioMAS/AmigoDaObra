@@ -1,5 +1,5 @@
 function criarP(text) {
-   const divTexto = document.getElementById('res')
+    const divTexto = document.getElementById('res')
     const newText = document.createElement('p')
     newText.innerText = text
     newText.classList = 'pClass'
@@ -13,6 +13,27 @@ function removeText() {
     divTexto.removeChild(texto)
     
 }
+
+function limparInput () {
+
+    var qpilar = document.getElementById("txtp").value = '' 
+    var qbarra = document.getElementById("txtb").value = ''
+    var tpilar = document.getElementById("txtt").value = '' 
+    var distestri = document.getElementById("txtd").value = '' 
+    var dim1 = document.getElementById("txte1").value = '' 
+    var dim2 = document.getElementById("txte2").value = ''
+
+    var diametroPilar = document.getElementsByName("ferro");
+    for(var i=0;i<diametroPilar.length;i++)
+    diametroPilar[i].checked = false;
+
+    var diametroEstribo = document.getElementsByName("aco");
+    for(var i=0;i<diametroEstribo.length;i++)
+    diametroEstribo[i].checked = false;
+
+    
+}
+
 
 
 var qpilar = document.getElementById("txtp")  //Quantidade de pilares (und) a 
@@ -52,22 +73,11 @@ calcFerroBtn.addEventListener('click', function () {
     }
 }
     
-
     
     var quantbpilar = Math.round(((a*b*c)/12)*1.1) 
     var quantbestribos = Math.round(((((a*c)/d)*(e*2+f*2+0.06))/12)*1.1)
-
-
-
-
-
-
-
-
-
     
     
-
     var pesoPilar = 0
     var pesoEstribo = 0
 
@@ -102,9 +112,6 @@ calcFerroBtn.addEventListener('click', function () {
     }
 
 
-
-
-
     if(a === 0 || b === 0 || c === 0 || d === 0 || e === 0 || f === 0){
         alert('ERRO: Está faltando dados, complete por favor')
     } else {
@@ -114,32 +121,17 @@ calcFerroBtn.addEventListener('click', function () {
         \nPeso ferragem do estribo ${pesoEstribo} kg.
         \nOBS.: As barras são de 12 metros. `)   
         
-           
+        limparInput ()   
     }    
+
+     
     
    
 })
 
 clean.addEventListener('click', function() {
-    var qpilar = document.getElementById("txtp").value = '' 
-    var qbarra = document.getElementById("txtb").value = ''
-    var tpilar = document.getElementById("txtt").value = '' 
-    var distestri = document.getElementById("txtd").value = '' 
-    var dim1 = document.getElementById("txte1").value = '' 
-    var dim2 = document.getElementById("txte2").value = ''
-
-    var diametroPilar = document.getElementsByName("ferro");
-    for(var i=0;i<diametroPilar.length;i++)
-    diametroPilar[i].checked = false;
-
-    var diametroEstribo = document.getElementsByName("aco");
-    for(var i=0;i<diametroEstribo.length;i++)
-    diametroEstribo[i].checked = false;
-    
-    
-    removeText() 
-
-    
+    limparInput ()       
+    removeText()     
 })
 
 
