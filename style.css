@@ -246,8 +246,9 @@ footer div img {
     #res {
         margin: 0 0 1rem 0;
         padding: 1rem;
-        border: .1rem solid #12121460;
+        border: .1rem solid transparent;
         border-radius: .4rem;
+
     }
 }
 
