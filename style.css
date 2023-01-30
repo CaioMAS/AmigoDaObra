@@ -128,68 +128,32 @@ h3 {
 }
 
 
-/* CALCULADORA DE FERRAGENS */
+/* SECTION INDEX */
 
-.container3 {
-    min-width: 320px;
-    max-width: 80%;
-    padding: 1rem;
+section {
     display: flex;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;  
-    background-color: #dcdcdf;
-    border: .1rem solid #12121460;
-    border-radius: .4rem;
-    gap: 1.5rem;    
+    align-items: center;
+    gap: 10px;
 }
 
-
-.container3 .form-ferragens div {
-    margin-bottom: .7rem;
+.textIndex {
+    text-align: center;
+    
 }
 
-.container3 .form-ferragens div input {
-    height: 1.5rem;
-    font-weight: bold;
-    outline: none;
-    border: transparent;
-    border-radius: .4rem;
-    padding-left: .4rem;
-}
-
-.form-ferragens .buttons-calc-ferr {
+.containerTextIndex {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
     display: flex;
-    justify-content: center;
-}
-
-.form-ferragens .calcular {
-    margin: .5rem;
-    padding: .5rem 1rem;
-    background-color: #ffff;
-    border: .1rem solid #12121460;
-    border-radius: .4rem;
-    font-size: 1em;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    cursor:  pointer;
-    transition: .4s;
-}
-
-.calcular:hover {
-    background-color: var(--principal);
-    color: white;
-}
-
-.bitola {
-    display: flex;
-    gap: 8px;
     align-items: center;
 }
 
-#res { 
-    text-align: center;
-    font-weight: bold;
-    margin-top: 3.5rem;
+section img {
+    width: 100vh;
 }
+
+
 
 /* RODAPÉ */
 

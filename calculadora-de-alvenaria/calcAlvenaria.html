@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigo da Obra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/navbar/styleNav.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <a href="/index.html" > <img src="/imagens/Logo.png" alt="LOGO" class="logo"></a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="/pgCalc.html">Calculadora de materiais</a></li>               
+                <li><a href="#">Dicas construtivas</a></li>          
+                <li><a href="#">Sobre nós</a></li>
+            </ul>
+        </nav>
+    </header>             
+       
+        
+    <section class="container3">
+        <div class="form-ferragens">
+            <h3>Calculadora de alvenaria</h3>
+            <div class="divcoluna">
+                <label for="propCimento">Proporção de cimento <strong>(und)</strong>:</label>
+                <input type="number" name="propCimento" id="propCimento" class="inputNumber">
+            </div>
+            <div class="divcoluna">
+                <label for="propCal">Proporção de cal <strong>(und)</strong>:</label>
+                <input type="number" name="propCal" id="propCal" class="inputNumber">
+            </div>
+            <div class="divcoluna">
+                <label for="propAreia">Proporção de areia <strong>(und)</strong>:</label>
+                <input type="number" name="propAreia" id="propAreia" class="inputNumber">
+            </div>
+            <div class="divcoluna">
+                <label for="largJunta">Largura da junta <strong>(cm)</strong>:</label>
+                <input type="number" name="largJunta" id="largJunta" class="inputNumber">
+            </div>
+            <div class="divcoluna">
+                <label for="largTijolo">Largura tijolo <strong>(cm)</strong>:</label>
+                <input type="number" name="largTijolo" id="largTijolo" class="inputNumber">
+            </div>
+            <div class="divcoluna">
+                <label for="altTijolo">Altura tijolo <strong>(cm)</strong>:</label>
+                <input type="number" name="altTijolo" id="altTijolo" class="inputNumber">
+            </div>
+            <div class="divcoluna">
+                <label for="compriTijolo">Comprimenro tijolo <strong>(cm)</strong>:</label>
+                <input type="number" name="compriTijolo" id="compriTijolo" class="inputNumber">
+            </div>
+            <div class="divcoluna">
+                <label for="areaParede">Área de parede <strong>(m²)</strong>:</label>
+                <input type="number" name="areaParede" id="areaParede" class="inputNumber">
+            </div>
+            <div class="buttons-calc-ferr" >
+                <button class="calcular" id="calcAlvenariaBtn">Calcular</button>
+                <button class="calcular" id="cleanAlvenaria"> Limpar</button>
+            </div>
+            
+        </div>
+
+        <div id="res"></div>
+
+    </section>
+
+    <footer>
+        <div>Projeto desenvolvido por <a href="https://www.linkedin.com/in/caio-santos-332889160/" target="_blank">Caio Santos </a> com a participação de <a href="https://www.linkedin.com/in/yureribeirodev/" target="_blank">Yure Ribeiro</a></div>
+        <div class="redeSocial">
+            <a href=""><img src="/imagens/insta.png" alt="Instagram"></a>
+            <a href=""><img src="/imagens/face.png" alt="Facebook"></a>
+            <a href=""><img src="/imagens/wpp.png" alt="Whatsapp"></a>
+        </div>
+    </footer> 
+
+
+    <script src="/calculadora-de-alvenaria/calcAlvenaria.js"></script>
+    <script src="/navbar/styleNav.css"></script>
+</body>
+</html>
