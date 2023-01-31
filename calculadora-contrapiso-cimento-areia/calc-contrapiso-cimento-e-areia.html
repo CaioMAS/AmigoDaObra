@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc. Alvenaria</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="calcAlvenaria.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
+</head>
+
+<body>
+    
+    <header class="header">
+        <a href="../index.html" >
+            <img src="../imagens/Logo.png"  alt="LOGO" class="logo">
+        </a>
+         <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="../pgCalc.html">Calculadora de materiais</a></li>               
+                <li><a href="#">Dicas construtivas</a></li>          
+                <li><a href="#">Sobre nós</a></li>
+            </ul>
+         </nav>
+     </header>            
+       
+        
+    <section class="container3">
+        <div class="form-ferragens"> 
+          <h3>Calculadora para contrapiso de cimento e areia</h3>
+        <div class="divcoluna">
+            <label for="">Proporção de cimento <strong>(und)</strong>:</label> 
+            <input type="number" name="txtp" id="propCimento" class="inputNumber">
+        </div>
+        <div class="divcoluna">
+            <label for="">Proporção de areia <strong>(und)</strong>:</label> 
+            <input type="number" name="txtb" id="propAreia" class="inputNumber">
+        </div>
+        <div class="divcoluna">
+            <label for="">Espessura do contrapiso <strong>(cm)</strong>:</label> 
+            <input type="number" name="txtt" id="espessuraContraPiso" class="inputNumber">
+        </div>
+        <div class="divcoluna">
+            <label for="">Área do contrapiso <strong>(m²)</strong>:</label> 
+            <input type="number" name="txtd" id="areaContraPiso" class="inputNumber">
+        </div>        
+       
+      
+        <div class="buttons-calc">
+            <button class="calcular" id="calcBtn">Calcular</button>
+            <button class="calcular" id="clean"> Limpar</button>
+        </div>
+        </div> 
+
+        <div id="res"></div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="textFooter">Projeto desenvolvido por <a href="https://www.linkedin.com/in/caio-santos-332889160/" target="_blank">Caio Santos </a> com a participação de <a href="https://www.linkedin.com/in/yureribeirodev/" target="_blank">Yure Ribeiro</a></div>
+            <div class="redeSocial">
+            <a href="#"><i class='bx bxl-instagram-alt' style='color:#f9f7f7'></i> </a>
+            <a href="#"><i class='bx bxl-linkedin-square' style='color:#f9f7f7'></i> </a>
+            <a href="#"><i class='bx bxl-whatsapp-square' style='color:#f9f7f7'></i> </a>
+            </div>
+    </footer>  
+
+
+    <script src="calc-contrapiso-cimento-e-areia.js"></script>
+    <script src="/navbar/mobile-navbar.js"></script>
+</body>
+</html>
