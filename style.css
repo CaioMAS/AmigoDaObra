@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baumans&display=swap');
+@import "./calculadora-de-alvenaria/calcAlvenaria.css";
+
 
 * {
     margin: 0;
@@ -11,72 +13,94 @@
  --principal: #23232e;
  --secundaria: #121214;
  --div: #f5821e42;
-
 }
 
+/* Body padrão todas as telas */
 body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    background-color: #eeeeeec7;
 }
 
+/* body home */
+.bodyIndex {
+    min-width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("./imagens/img-capacetes.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: right;
+    background-color: #eeeeeec7;
+}   
 
-a {
-    color: #000;
-    text-decoration: none;
-}
-
-a:hover {
-    opacity: 0.7;
+/* HEADER */
+.header {
+    display: flex;
+    background-color: var(--principal);
+    width: 100%;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 1rem !important;
 }
 
 .logo {
     width: 5rem;
+    cursor: pointer;
+    align-items: center;
 }
 
-nav {
-    width: 100vw;
+.navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: end;
+    width: 100%;
     align-items: center;
-    background-color: gray;
-    height: 8vh;
 }
 
 .nav-list {
     list-style: none;
     display: flex;
+    padding-left: 1rem;
 }
 
-.nav-list li {
-    margin-left: 32px;
-
+.nav-list li a {
+    text-decoration: none;
+    color: #ffff;
+    padding: 0 1.5rem;
 }
 
-.mobile-menu {
-    cursor: pointer;
-    display: none;
+/* SECTION INDEX (HOME) */
+.containerTexto {
+   padding: 2rem;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   font-family: Arial, Helvetica, sans-serif;
+   transition: 1s;
 }
 
-.mobile-menu div {
-    width: 32px;
-    height: 2px;
-    background-color: #fff;
-    margin: 8px;
+.tituloIndex{
+    
+    font-size: 2.6rem;
+    color: var(--principal);
 }
 
-.imgfoto {
-    width: 100%;
-    border-radius: 20px;
-
+.paragrafoIndex{
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--principal);
 }
 
 /* CALCULADORAS DE MATERIAIS */
-
 .container2 {
     display: flex;
     flex-direction: column;
@@ -97,7 +121,7 @@ nav {
     gap: 1rem;
 }
 
-h3 {
+.tituloCalculadoras {
     text-align: center;
     font-size: 1.8rem;
     color: var(--principal);
@@ -131,90 +155,54 @@ h3 {
 
 
 /* SECTION INDEX */
-
-section {
-    width: 100vw;
-    height: 100vh;
+.containerTexto {
     display: flex;
-    align-items: center;  
-    
+    width: 100%;
 }
 
-.textIndex {
-    text-align: center;
-    
+.ImagemIndex{
+    width: 49rem;
 }
-
-.containerTexto {    
-    width: 43.75rem;
-    height: 25rem;      
-    margin-left: 6rem;   
-    
-}
-
-.containerImagemIndex {
-    position: fixed;
-    right: 0;
-         
-    
-}
-
-section img {
-    width: 140vh;
-}
-
 
 
 /* RODAPÉ */
 
-footer {
-    padding:  1rem;
+.footer {
+    padding:  1rem 2rem;
     position: fixed;
     bottom: 0;
     background-color: var(--principal);
-    color: white;
+    color: #ffff;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-footer div img {
-    width: 1.7rem;
+.textFooter {
+    font-weight: bold;
+    font-size: .8rem;
 }
 
+.textFooter a {
+    text-decoration: none;
+    color: gray;
+}
 
+.redeSocial i {
+    font-size: 2rem;
+}
 
 
 /* MEDIA QUERYS */
 
 @media (max-width: 999px) {
 
-    body {
-        overflow-x: hidden;
-    }
-    .nav-list {
-        position: absolute;
-        top: 8vh;
-        right: 0;
-        width: 50vw;
-        height: 92vh;
-        background-color: gray;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%);
+    .bodyIndex {
+        background-image: url("./imagens/imagemParaMobile.png");
     }
 
-    .nav-list li {
-        margin-left: 0;
-        opacity: 0;
-    }
-
-    .mobile-menu {
-        display: block;
-    }
 
     /* CALCULADORA DE FERRAGENS */
 
@@ -231,9 +219,7 @@ footer div img {
     }
 }
 
-.nav-list.active {
-    transform: translateX(0);
-}
+
 
 
 @media (max-width: 400px) { /*tela menor qur 400px*/
