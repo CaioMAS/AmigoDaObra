@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baumans&display=swap');
 @import "./calculadora-de-alvenaria/calcAlvenaria.css";
-
+@import "./calculadora-contrapiso-cimento-areia/";
 
 * {
     margin: 0;
@@ -36,7 +36,7 @@ body {
     align-items: center;
     background-image: url("./imagens/img-capacetes.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position-x: right;
     background-color: #eeeeeec7;
 }   
@@ -89,7 +89,6 @@ body {
 }
 
 .tituloIndex{
-    
     font-size: 2.6rem;
     color: var(--principal);
 }

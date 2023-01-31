@@ -10,12 +10,17 @@
     border-radius: .4rem;
     gap: 1.5rem;    
 }
+.container3 h3 {
+    color: var(--principal);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
 
-.container3 .form-ferragens div {
+.container3 .form div {
     margin-bottom: .7rem;
 }
 
-.container3 .form-ferragens div input {
+.container3 .form div input {
     height: 1.5rem;
     font-weight: bold;
     outline: none;
@@ -24,12 +29,12 @@
     padding-left: .4rem;
 }
 
-.form-ferragens .buttons-calc-ferr {
+.form .buttons-calc {
     display: flex;
     justify-content: center;
 }
 
-.form-ferragens .calcular {
+.form .calcular {
     margin: .5rem;
     padding: .5rem 1rem;
     background-color: #ffff;
