@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calc. Contra Piso</title>
+    <title>Calc. assentamento piso</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="calc-contrapiso-cimento-e-areia.css">
+    <link rel="stylesheet" href="calc-assentamento-piso.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
 </head>
 
@@ -28,23 +28,32 @@
         
     <section class="container3">
         <div class="form"> 
-          <h3>Calculadora para contrapiso de cimento e areia</h3>
+          <h3>Calculadora de argamassa e rejunte</h3>
         <div class="divcoluna">
-            <label for="">Proporção de cimento <strong>(und)</strong>:</label> 
-            <input type="number" name="txtp" id="propCimento" class="inputNumber">
+            <label for="">Comprimento da peça <strong>(cm)</strong>:</label> 
+            <input type="number" name="txtp" id="comprimentoPeca" class="inputNumber">
         </div>
+
         <div class="divcoluna">
-            <label for="">Proporção de areia <strong>(und)</strong>:</label> 
-            <input type="number" name="txtb" id="propAreia" class="inputNumber">
+            <label for="">Largura da peça <strong>(cm)</strong>:</label> 
+            <input type="number" name="txtb" id="larguraPeca" class="inputNumber">
         </div>
+
         <div class="divcoluna">
-            <label for="">Espessura do contrapiso <strong>(cm)</strong>:</label> 
-            <input type="number" name="txtt" id="espessuraContraPiso" class="inputNumber">
+            <label for="">Espessura da peça <strong>(mm)</strong>:</label> 
+            <input type="number" name="txtp" id="espessuraPeca" class="inputNumber">
         </div>
+
+        
         <div class="divcoluna">
-            <label for="">Área do contrapiso <strong>(m²)</strong>:</label> 
-            <input type="number" name="txtd" id="areaContraPiso" class="inputNumber">
-        </div>        
+            <label for="">Largura da junta <strong>(mm)</strong>:</label> 
+            <input type="number" name="txtt" id="larguraJunta" class="inputNumber">
+        </div>
+
+        <div class="divcoluna">
+            <label for="">Área total de piso <strong>(m²)</strong>:</label> 
+            <input type="number" name="txtd" id="areaPiso" class="inputNumber">
+        </div>                  
        
       
         <div class="buttons-calc">
@@ -67,7 +76,7 @@
     </footer>  
 
 
-    <script src="calc-contrapiso-cimento-e-areia.js"></script>
+    <script src="calc-assentamento-piso.js"></script>
     <script src="/navbar/mobile-navbar.js"></script>
 </body>
 </html>

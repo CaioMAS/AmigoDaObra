@@ -163,6 +163,43 @@ body {
     width: 49rem;
 }
 
+/* TABELA DICAS CONSTRUTIVAS */
+
+.tg  {
+    border-collapse:collapse;
+    border-spacing:0;
+    background-color: #dcdcdf;
+    border: .1rem solid #12121460;
+}
+
+.tg td{
+    border-color:#12121460;
+    border-style:solid;
+    border-width:1px;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;
+}
+
+.tg th{
+    border-color:#12121460;
+    border-style:solid;
+    border-width:1px;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;
+}
+
+.tg .tg-0lax{
+    text-align:left;
+    vertical-align:top
+}
+
 
 /* RODAPÉ */
 

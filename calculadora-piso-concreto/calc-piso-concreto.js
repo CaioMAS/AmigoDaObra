@@ -16,17 +16,20 @@ function criarP(text) {
 
  function limparInput () {
     var proporcaoCimento = document.getElementById('propCimento').value = ''
-    var proporcaoAreia = document.getElementById('propAreia').value = '' 
-    var espessuraContraPiso = document.getElementById('espessuraContraPiso').value = '' 
-    var areaDoContraPiso = document.getElementById('areaContraPiso').value = '' 
+    var proporcaoAreia = document.getElementById('propAreia').value = ''
+    var proporcaoBrita = document.getElementById('propBrita').value = ''
+    var espessuraPiso = document.getElementById('espessuraPiso').value = ''
+    var areaDoPiso = document.getElementById('areaDoPiso').value = ''
+    
 }
 
 
 
 var proporcaoCimento = document.getElementById('propCimento') // se transforma em A
 var proporcaoAreia = document.getElementById('propAreia') // se transforma em B
-var espessuraContraPiso = document.getElementById('espessuraContraPiso') // se transforma em C
-var areaDoContraPiso = document.getElementById('areaContraPiso') // se transforma em D
+var proporcaoBrita = document.getElementById('propBrita') // se transforma em C
+var espessuraPiso = document.getElementById('espessuraPiso') // se transforma em D
+var areaDoPiso = document.getElementById('areaDoPiso') // se transforma em E
 
 const calcMaterialBtn =  document.getElementById('calcBtn')
 const clean = document.getElementById('clean')
@@ -35,17 +38,21 @@ calcMaterialBtn.addEventListener('click', function () {
 
     var a = Number(proporcaoCimento.value)
     var b = Number(proporcaoAreia.value)
-    var c = Number(espessuraContraPiso.value)
-    var d = Number(areaDoContraPiso.value)
+    var c = Number(proporcaoBrita.value)
+    var d = Number(espessuraPiso.value)
+    var e = Number(areaDoPiso.value)
 
-    var quantAreia = ((d*c*1.05/100)).toFixed(2)
-    var quantCimento = Math.ceil((quantAreia/b)*1400/50)
+    var quantBrita = (d*e*1.05/100*0.7).toFixed(2)
+    var quantAreia = ((quantBrita/c)*b).toFixed(2)
+    var quantCimento = Math.ceil((quantBrita/c)*1400/50)
+    
 
-    if(a === 0 || b === 0 || c === 0 || d === 0 ) {
+    if(a === 0 || b === 0 || c === 0 || d === 0 || e === 0 ) {
         alert("'ERRO: Está faltando dados, complete por favor'")
     } else {
     criarP(`Quantidade de cimento: ${quantCimento} saco de 50 kg
-    \n Quantidade de areia: ${quantAreia} m³`)
+    \n Quantidade de areia: ${quantAreia} m³
+    \n Quantidade de cal: ${quantBrita} m³`)
 
     limparInput()  
     }
