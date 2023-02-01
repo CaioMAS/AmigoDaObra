@@ -24,6 +24,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #eeeeeec7;
+    flex-wrap: nowrap;
 }
 
 /* body home */
@@ -34,7 +35,7 @@ body {
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
-    background-image: url("./imagens/img-capacetes.png");
+    background-image: url("./imagens/imageNotebook.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position-x: right;
@@ -86,6 +87,9 @@ body {
    gap: 1rem;
    font-family: Arial, Helvetica, sans-serif;
    transition: 1s;
+   width: 60%;
+   position: relative;
+   left: -20%;
 }
 
 .tituloIndex{
@@ -96,6 +100,7 @@ body {
 .paragrafoIndex{
     font-size: 1.4rem;
     font-style: italic;
+    font-weight: bold;
     color: var(--principal);
 }
 
@@ -104,15 +109,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70%;
-    height: auto;
-    margin: 2rem 0;
+    width: 80%;
+    margin-top: .5rem;
     padding: 1rem;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-family: system-ui, Helvetica, Arial, sans-serif;
     background-color: #dcdcdf;
     border: .1rem solid #12121460;
     border-radius: .4rem;
-    font-size: .8rem;
 }
 
 .calculadoras {
@@ -127,82 +130,64 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.container2 ul li {
-    list-style: none;
-    margin-bottom: 1rem;
-    border: .1rem solid #12121460;
-    border-radius: .4rem;
-    padding: .5rem 1rem;
-    transition: .5s;
-}
-
-.container2 ul li:hover {
-    background-color: #23232e;
-}
-
-.container2 ul li a {
+.container2 a {
     text-decoration: none;
-    font-size: 1.5em;
-    color: #000;
-    transition: .5s;
+    font-size: 1.3rem;
+    color: var(--principal);
+    cursor: pointer;
+    transition: .35s;
 }
-
-.container2 ul li a:hover {
-    opacity: 1;
+.container2 a:hover {
     color: #ffff;
 }
 
-
-/* SECTION INDEX */
-.containerTexto {
-    display: flex;
-    width: 100%;
+.container2 li {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 1rem;
+    border: .1rem solid #12121460;
+    box-shadow: #121214 .1rem .1rem;
+    border-radius: .4rem;
+    padding: .5rem 1rem;
+    transition: .25s;
+}
+.container2 li:hover {
+    background-color: #23232e;
 }
 
-.ImagemIndex{
-    width: 49rem;
+.lista-Calculadoras:hover > :not(:hover) {
+    opacity: .7;
+    transform: scale(0.9);
 }
+
 
 /* TABELA DICAS CONSTRUTIVAS */
-
 .tg  {
     border-collapse:collapse;
     border-spacing:0;
     background-color: #dcdcdf;
     border: .1rem solid #12121460;
-}
-
-.tg td{
-    border-color:#12121460;
-    border-style:solid;
-    border-width:1px;
     font-family:Arial, sans-serif;
-    font-size:14px;
-    overflow:hidden;
-    padding:10px 5px;
-    word-break:normal;
+    font-size: .85rem;
 }
 
 .tg th{
-    border-color:#12121460;
-    border-style:solid;
-    border-width:1px;
-    font-family:Arial, sans-serif;
-    font-size:14px;
-    font-weight:normal;
-    overflow:hidden;
-    padding:10px 5px;
-    word-break:normal;
+    font-weight:bold;
+    color: var(--principal);
+    text-align: center !important;
+    padding: 10px 5px;
 }
 
-.tg .tg-0lax{
-    text-align:left;
-    vertical-align:top
+.tg td{
+    color: var(--principal);
+    text-align: center !important;
+    font-family: Arial, Helvetica, sans-serif;
+    border: .1rem solid #12121460;
+    padding: 8px 5px;
 }
 
 
 /* RODAPÉ */
-
 .footer {
     padding:  1rem 2rem;
     position: fixed;
@@ -233,20 +218,37 @@ body {
 
 /* MEDIA QUERYS */
 
-@media (max-width: 999px) {
+@media (max-width: 1050px) {
 
     .bodyIndex {
-        background-image: url("./imagens/imagemParaMobile.png");
+        background-image: url("./imagens/imageNotebook.png");
+    }
+    
+    /* SECTION HOME INDEX */
+    .logo {
+        width: 4rem;
     }
 
+    .tituloIndex{
+        font-size: 2rem;
+        text-shadow: 1px 1px 1px rgb(252, 251, 251), 0 0 0.2em rgb(253, 253, 253);
+    }
 
-    /* CALCULADORA DE FERRAGENS */
+    .paragrafoIndex{
+        font-size: 1rem;
+        text-shadow: 1px 1px 1px rgb(252, 251, 251), 0 0 0.2em rgb(253, 253, 253);
+    }
+    /* CALCULADORAS DE MATERIAIS */
+    .container2 {
+        width: 90%;
+        margin-top: 0;
+    }
 
+    /* CALCULADORA E RESULTADOS */
     .container3 {
         flex-direction: column;
     }
     
-
     #res {
         margin: 0 0 1rem 0;
         padding: 1rem;
@@ -258,28 +260,8 @@ body {
 
 
 
-@media (max-width: 400px) { /*tela menor qur 400px*/
-    section {
-        display: flex;
-        flex-direction: column;
-        
-    }
+@media (max-width: 885px) { /*MOBILE*/
 
-    .divcoluna {
-        display: flex;
-        flex-direction: column;
-        
-    }
-
-    section div label {
-        margin-bottom: 0.4rem;
-    }
-
-    section div input {
-        margin-bottom: 0.4rem;
-        text-align: center;
-    }
-    
    
 }
 
