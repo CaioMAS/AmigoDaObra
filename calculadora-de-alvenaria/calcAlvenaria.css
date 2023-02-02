@@ -16,6 +16,22 @@
 .paragrafoObservaçao i {
     align-items: center;
 }
+
+/* imagens e calculadora (não inclui observação) */
+.containerAlvenaria {
+    display: flex;
+    align-items: center;
+}
+/* imagens alvenaria */
+.imgEsquemaTijolo {
+    width: 24rem;
+    padding: 0 4rem;
+}
+.imgTijolo {
+    width: 22rem;
+    padding: 0 4rem;
+}
+
 /* CALCULADORA */
 .container3 {
     min-width: 320px;

@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
 
 :root {
@@ -14,7 +14,7 @@
  --div: #f5821e42;
 }
 
-/* Body padrão todas as telas */
+/* BODY TELAS CALCULADORAS */
 body {
     width: 100vw;
     height: 100vh;
@@ -26,10 +26,10 @@ body {
     flex-wrap: nowrap;
 }
 
-/* body home */
+/* BODY HOME */
 .bodyIndex {
     min-width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -46,11 +46,11 @@ body {
     display: flex;
     background-color: var(--principal);
     width: 100%;
-    padding: 1rem 2rem;
+    padding: .5rem 2.5rem;
     justify-content: space-between;
     font-family: system-ui, Helvetica, Arial, sans-serif;
     font-weight: bold;
-    margin-bottom: 1rem !important;
+    margin-bottom: .5rem !important;
 }
 
 .logo {
@@ -86,14 +86,15 @@ body {
    gap: 1rem;
    font-family: system-ui, Helvetica, Arial, sans-serif;
    transition: 1s;
-   width: 60%;
-   position: relative;
-   left: -20%;
+    position: absolute;
+    left: 1rem;
+    top: 10rem;
 }
 
 .tituloIndex{
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     color: var(--principal);
+    text-shadow: 1px 1px 1px rgb(252, 251, 251), 0 0 0.2em rgb(253, 253, 253);
 }
 
 .paragrafoIndex{
@@ -101,6 +102,7 @@ body {
     font-style: italic;
     font-weight: bold;
     color: var(--principal);
+    text-shadow: 1px 1px 1px rgb(252, 251, 251), 0 0 0.2em rgb(253, 253, 253);
 }
 
 /* CALCULADORAS DE MATERIAIS */
@@ -108,29 +110,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 50%;
     margin-top: .5rem;
     padding: 1rem;
     font-family: system-ui, Helvetica, Arial, sans-serif;
     background-color: #dcdcdf;
     border: .1rem solid #12121460;
     border-radius: .4rem;
-}
-
-.containerSobreNos{   
-    max-width: 50%;
-    margin-top: .5rem;
-    padding: 1rem;
-    font-family: system-ui, Helvetica, Arial, sans-serif;
-    background-color: #dcdcdf;
-    border: .1rem solid #12121460;
-    border-radius: .4rem;
-}
-
-.paragrafoSobreNos {
-    font-size: 1.2rem;
-    line-height: 2rem;
-    text-align: justify;
 }
 
 .calculadoras {
@@ -170,11 +156,25 @@ body {
     background-color: #23232e;
 }
 
-.lista-Calculadoras:hover > :not(:hover) {
-    opacity: .7;
-    transform: scale(0.9);
+
+/* pagina SOBRE NÓS */
+.containerSobreNos{   
+    max-width: 70%;
+    margin-top: .5rem;
+    padding: 1rem;
+    font-family: system-ui, Helvetica, Arial, sans-serif;
+    background-color: #dcdcdf;
+    border: .1rem solid #12121460;
+    border-radius: .4rem;
+}
+.tituloSobreNos {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
+.paragrafoSobreNos {
+    font-size: 1.17rem;
+}
 
 /* TABELA DICAS CONSTRUTIVAS */
 .tg  {
@@ -190,7 +190,7 @@ body {
     font-weight:bold;
     color: var(--principal);
     text-align: center !important;
-    padding: 10px 5px;
+    padding: 6px 5px;
 }
 
 .tg td{
@@ -204,9 +204,9 @@ body {
 
 /* RODAPÉ */
 .footer {
-    padding:  1rem 2rem;
     position: fixed;
     bottom: 0;
+    padding:  .5rem 3rem;
     background-color: var(--principal);
     color: #ffff;
     width: 100%;
@@ -274,7 +274,6 @@ body {
         border-radius: .4rem;
     }
 }
-
 
 
 
