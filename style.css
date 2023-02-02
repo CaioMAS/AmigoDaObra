@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Baumans&display=swap');
-@import "./calculadora-de-alvenaria/calcAlvenaria.css";
-@import "./calculadora-contrapiso-cimento-areia/";
+
 
 * {
     margin: 0;
@@ -215,6 +214,9 @@ body {
     font-size: 2rem;
 }
 
+ .iconsLink {
+    text-decoration: none;
+}
 
 /* MEDIA QUERYS */
 
