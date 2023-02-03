@@ -55,7 +55,7 @@ calcMaterialBtn.addEventListener('click', function () {
     } else {
     criarP(`Quantidade de cimento: ${quantCimento} saco de 50 kg
     \n Quantidade de areia: ${quantAreia} m³
-    \n Quantidade de cal: ${quantBrita} m³`)
+    \n Quantidade de brita: ${quantBrita} m³`)
 
     limparInput()  
     }
