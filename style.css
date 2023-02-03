@@ -87,8 +87,8 @@ body {
    font-family: system-ui, Helvetica, Arial, sans-serif;
    transition: 1s;
     position: absolute;
-    left: 1rem;
-    top: 10rem;
+    left: 5rem;
+    top: 15rem;
 }
 
 .tituloIndex{
@@ -159,7 +159,7 @@ body {
 
 /* pagina SOBRE NÓS */
 .containerSobreNos{   
-    max-width: 70%;
+    max-width: 50%;
     margin-top: .5rem;
     padding: 1rem;
     font-family: system-ui, Helvetica, Arial, sans-serif;
