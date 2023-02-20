@@ -1,66 +1,54 @@
-function criarP(text) {
-    const divTexto = document.getElementById('res')
-     const newText = document.createElement('p')
-     newText.innerText = text
-     newText.classList = 'pClass'
-     divTexto.appendChild(newText) 
-     
- }
- 
- function removeText() {
-     const divTexto = document.querySelector('#res') 
-     const texto = document.querySelector('#res p') 
-     divTexto.removeChild(texto)
-     
- }
+import { inputValues } from './infrastructure/inputValues'
 
- function limparInput () {
-    var proporcaoCimento = document.getElementById('propCimento').value = ''
-    var proporcaoAreia = document.getElementById('propAreia').value = ''
-    var proporcaoBrita = document.getElementById('propBrita').value = ''
-    var volumeConcreto = document.getElementById('volumeConcreto').value = ''
-    
-    
+const createResultElement = (text = `No result found`) => {
+    const resultDiv = document.querySelector('#res');
+    const newParagraphElement = document.createElement('p');
+    newParagraphElement.innerText = text;
+    newParagraphElement.classList = 'pClass';
+    resultDiv.appendChild(newParagraphElement);
 }
 
+const clearResultElement = () => {
+    const resultElement = document.querySelector('#res');
+    const paragraphElement = document.querySelector('#res p');
+    resultElement.removeChild(paragraphElement);
+}
 
+const clearInput = () => {
+    /* Object.values(inputValues).map(elementId => {...}) */
+    [`propCimento`, `propAreia`, `propBrita`, `volumeConcreto`].map(elementId => {
+        document.querySelector(`#${elementId}`).value = '';
+    })
+}
 
-var proporcaoCimento = document.getElementById('propCimento') // se transforma em A
-var proporcaoAreia = document.getElementById('propAreia') // se transforma em B
-var proporcaoBrita = document.getElementById('propBrita') // se transforma em C
-var volumeConcreto = document.getElementById('volumeConcreto') // se transforma em D
+document.querySelector(`#calcBtn`).addEventListener('click', () => {
+    const values = {}
 
+    /* Object.values(inputValues).map(elementId => {...}) */
+    [`propCimento`, `propAreia`, `propBrita`, `volumeConcreto`].map(elementId => {
+        values[elementId] = Number(document.querySelector(`#${elementId}`));
+    })
 
-const calcMaterialBtn =  document.getElementById('calcBtn')
-const clean = document.getElementById('clean')
+    const gravelAmount = (values.volumeConcreto * 1.05 / 1 * 0.7).toFixed(2);
+    const sandAmount = ((gravelAmount / values.propBrita) * values.propAreia).toFixed(2);
+    const cementAmount = Math.ceil((gravelAmount / values.propBrita) * 1400 / 50);
 
-calcMaterialBtn.addEventListener('click', function () {
-
-    var a = Number(proporcaoCimento.value)
-    var b = Number(proporcaoAreia.value)
-    var c = Number(proporcaoBrita.value)
-    var d = Number(volumeConcreto.value)
-    
-
-    var quantBrita = (d*1.05/1*0.7).toFixed(2)
-    var quantAreia = ((quantBrita/c)*b).toFixed(2)
-    var quantCimento = Math.ceil((quantBrita/c)*1400/50)
-    
-
-    if(a === 0 || b === 0 || c === 0 || d === 0 ) {
-        alert("'ERRO: Está faltando dados, complete por favor'")
-    } else {
-    criarP(`Quantidade de cimento: ${quantCimento} saco de 50 kg
-    \n Quantidade de areia: ${quantAreia} m³
-    \n Quantidade de brita: ${quantBrita} m³`)
-
-    limparInput()  
+    if (Object.values(values).some(value => value === 0)) {
+        alert(`ERRO: Está faltando dados, complete por favor`);
+        return;
     }
 
-})
+    createResultElement(
+        `Quantidade de cimento: ${cementAmount} saco de 50 kg
+        Quantidade de areia: ${sandAmount} m³
+        Quantidade de brita: ${gravelAmount} m³`
+    );
 
-clean.addEventListener('click', function () {
-    limparInput()
-    removeText()
-})
+    clearInput();
+});
+
+document.querySelector(`#clean`).addEventListener('click', () => {
+    clearInput();
+    clearResultElement();
+});
 
